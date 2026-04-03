@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function Home(){
   const [recipes, setRecipes] = useState([]);
@@ -32,6 +33,7 @@ function Register(){
 function AddRecipe(){
   const [title,setTitle]=useState("");
   const [calories,setCalories]=useState("");
+  const navigate=useNavigate();
 
   const handleSubmit=(e)=>{
     e.preventDefault();
@@ -41,16 +43,14 @@ function AddRecipe(){
       calories:Number(calories)
     };
 
-    fetch("http://localhost:3001/recipe",{
+    fetch("http://localhost:3001/recipes",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
       },
       body:JSON.stringify(newRecipe)
     }).then(()=>{
-      alert("Recipe added!");
-      setTitle("");
-      setCalories("");
+      navigate("/");
     });
   };
 
