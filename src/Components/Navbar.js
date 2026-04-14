@@ -1,33 +1,24 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const status = localStorage.getItem("isLoggedIn");
-    setIsLoggedIn(status === "true");
-    
-  }, []);
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
-    window.location.reload(); 
-    setIsLoggedIn(false);
+    window.location.href = "/login";
   };
 
   return (
     <nav>
-      <Link to="/">Home</Link> |{" "}
+      <Link to="/">Home</Link>
+
       {isLoggedIn && <Link to="/add">Add Recipe</Link>}
 
-      {isLoggedIn ? (
+      {!isLoggedIn && <Link to="/login">Login</Link>}
+      {!isLoggedIn && <Link to="/register">Register</Link>}
+
+      {isLoggedIn && (
         <button onClick={handleLogout}>Logout</button>
-      ) : (
-        <>
-          <Link to="/login">Login</Link> |{" "}
-          <Link to="/register">Register</Link>
-        </>
       )}
     </nav>
   );
