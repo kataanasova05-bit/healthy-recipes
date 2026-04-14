@@ -1,14 +1,16 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "title": "Healthy Pancakes",
-      "calories": 200
-    },
-    {
-      "id": 2,
+      "id": "2",
       "title": "Avocado Salad",
       "calories": 150
+    },
+    {
+      "id": "3",
+      "title": "Healthy Burgers",
+      "calories":200
+
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

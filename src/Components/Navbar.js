@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <nav>
       <Link to="/">Home</Link> |{" "}
-      <Link to="/add">Add Recipe</Link> |{" "}
+      {isLoggedIn && <Link to="/add">Add Recipe</Link>}
 
       {isLoggedIn ? (
         <button onClick={handleLogout}>Logout</button>
