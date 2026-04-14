@@ -1,17 +1,21 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./Pages/Home";
-import AddRecipe from "./Pages/Add.Recipe";
-import Navbar from "./Components/Navbar";
+import Home from "./pages/Home";
+import AddRecipe from "./pages/AddRecipe";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-function App(){
-  return(
+function App() {
+  return (
     <Router>
-      <Navbar/>
+      <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/add" element={<AddRecipe/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<AddRecipe />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

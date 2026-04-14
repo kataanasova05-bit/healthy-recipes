@@ -1,0 +1,59 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+function AddRecipe() {
+  const [title, setTitle] = useState("");
+  const [calories, setCalories] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newRecipe = {
+      title,
+      calories: Number(calories)
+    };
+
+    fetch("http://localhost:3001/recipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newRecipe)
+    }).then(() => {
+      navigate("/");
+    });
+  };
+
+  return (
+    <div>
+      <h1>Add Recipe</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+
+        <input
+          type="number"
+          value={calories}
+          onChange={(e) => setCalories(e.target.value)}
+        />
+
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  );
+}
+
+export default AddRecipe;
