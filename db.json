@@ -3,12 +3,14 @@
     {
       "id": "2",
       "title": "Avocado Salad",
-      "calories": 150
+      "calories": 150,
+      "image": "/images/Cottage-cheese-pancakes-9.jpg"
     },
     {
       "id": "3",
       "title": "Healthy Burgers",
-      "calories":200
+      "calories":200,
+      "image":"/images/Ultimate-Healthy-Vegan-Black-Bean-Burger_06.jpg"
 
     }
   ],
