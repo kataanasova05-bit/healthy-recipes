@@ -1,18 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user") || "null");
 
     if (user && user.email === email && user.password === password) {
       localStorage.setItem("isLoggedIn", "true");
       alert("Login successful!");
-      window.location.href = "/";
+      navigate("/");
     } else {
       alert("Wrong email or password");
     }

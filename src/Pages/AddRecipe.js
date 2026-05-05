@@ -5,17 +5,23 @@ function AddRecipe() {
   const [title, setTitle] = useState("");
   const [calories, setCalories] = useState("");
   const navigate = useNavigate();
+ 
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if (!isLoggedIn) {
-      navigate("/login");
-    }
+   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+   
+   if (!isLoggedIn) {
+    navigate("/login");
+  }
   }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
+
+  if (!title || !calories) {
+    alert("Fill all fields");
+    return;
+  }
 
     const newRecipe = {
       title,

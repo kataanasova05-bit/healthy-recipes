@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -11,7 +13,7 @@ function Register() {
     localStorage.setItem("user", JSON.stringify(user));
 
     alert("Registered successfully!");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (

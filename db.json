@@ -1,17 +1,28 @@
 {
   "recipes": [
     {
-      "id": "2",
+      "id": "1",
       "title": "Avocado Salad",
+      "calories": 150,
+      "image": "/images/avokado.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Pancakes",
       "calories": 150,
       "image": "/images/Cottage-cheese-pancakes-9.jpg"
     },
     {
       "id": "3",
       "title": "Healthy Burgers",
-      "calories":200,
-      "image":"/images/Ultimate-Healthy-Vegan-Black-Bean-Burger_06.jpg"
-
+      "calories": 200,
+      "image": "/images/Ultimate-Healthy-Vegan-Black-Bean-Burger_06.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Healthy Chicken Breast and Broccoli ",
+      "calories": "251",
+      "image":"/images/chicken-and-broccoli-stir-fry.jpg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
