@@ -70,11 +70,21 @@ function Home() {
         ) : (
           recipes
             .filter(recipe => {
-              if (!recipe.title.toLowerCase().includes(search.toLowerCase())) return false;
-              if (filter === "low") return recipe.calories < 200;
-              if (filter === "high") return recipe.calories >= 200;
-              return true;
-            })
+  // 1. Предпазна проверка: ако рецептата или заглавието липсват, пропускаме
+  if (!recipe || !recipe.title) return false;
+
+  // 2. Търсене (безопасно)
+  const matchesSearch = recipe.title
+    .toLowerCase()
+    .includes((search || "").toLowerCase());
+
+  // 3. Филтър за калории
+  let matchesFilter = true;
+  if (filter === "low") matchesFilter = recipe.calories < 200;
+  if (filter === "high") matchesFilter = recipe.calories >= 200;
+
+  return matchesSearch && matchesFilter;
+})
             .map(recipe => {
               const fav = JSON.parse(localStorage.getItem("fav") || "[]");
               const isFav = fav.some(r => r.id === recipe.id);

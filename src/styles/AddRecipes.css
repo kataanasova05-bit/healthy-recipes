@@ -1,0 +1,80 @@
+/* Основен контейнер */
+.add-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+/* Картата на формата */
+.recipe-form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recipe-form h1 {
+  text-align: center;
+  color: #53c648;
+  margin-bottom: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Стилизиране на полетата */
+.recipe-form input, 
+.recipe-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.recipe-form input:focus, 
+.recipe-form textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
+}
+
+.recipe-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Бутонът */
+.recipe-form button {
+  background: #51ce62;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.recipe-form button:hover {
+  background: #4ba267;
+}
+
+/* Малък бонус: анимация при поява */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.recipe-form {
+  animation: fadeIn 0.5s ease-out;
+}

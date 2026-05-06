@@ -4,26 +4,73 @@
       "id": "1",
       "title": "Avocado Salad",
       "calories": 150,
-      "image": "/images/avokado.jpg"
+      "image": "/images/avokado.jpg",
+      "ingredients": "2 ripe avocados, 1 cup cherry tomatoes, 1 cucumber, 1/4 red onion, cilantro, olive oil, lime juice.",
+      "instructions": "Mix all diced vegetables in a bowl, drizzle with olive oil and lime juice, and toss gently."
     },
     {
       "id": "2",
       "title": "Pancakes",
       "calories": 150,
-      "image": "/images/Cottage-cheese-pancakes-9.jpg"
+      "image": "/images/Cottage-cheese-pancakes-9.jpg",
+      "ingredients": "Flour, eggs, milk, sugar",
+      "instructions": "Mix all ingredients. Fry for 2 minutes each side."
     },
     {
       "id": "3",
       "title": "Healthy Burgers",
       "calories": 200,
-      "image": "/images/Ultimate-Healthy-Vegan-Black-Bean-Burger_06.jpg"
+      "image": "/images/Ultimate-Healthy-Vegan-Black-Bean-Burger_06.jpg",
+      "ingredients": "Black beans, oats, onion, garlic, spices, whole grain buns.",
+      "instructions": "Mash beans, mix with ingredients, form patties and grill until firm."
     },
     {
       "id": "4",
-      "title": "Healthy Chicken Breast and Broccoli ",
-      "calories": "251",
-      "image":"/images/chicken-and-broccoli-stir-fry.jpg"
-    }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+      "title": "Healthy Chicken Breast and Broccoli",
+      "calories": 251,
+      "image": "/images/chicken-and-broccoli-stir-fry.jpg",
+      "ingredients": "Chicken breast, broccoli, soy sauce, ginger, garlic.",
+      "instructions": "Stir-fry chicken until golden, add broccoli and sauce, cook until tender."
+    },
+   {
+    "id": "5",
+    "title": "Berry Oatmeal Bowl",
+    "calories": 320,
+    "image": "/images/Blueberry-Oatmeal-Porridge-3916.jpg",
+    "ingredients": "Rolled oats, almond milk, blueberries, strawberries, chia seeds, honey.",
+    "instructions": "Cook oats with milk, top with fresh berries and seeds. Drizzle with honey."
+  },
+  {
+    "id": "6",
+    "title": "Grilled Salmon & Asparagus",
+    "calories": 450,
+    "image": "/images/Grilled-blackened-salmon-resized-large.jpeg",
+    "ingredients": "Salmon fillet, asparagus, lemon, olive oil, garlic, black pepper.",
+    "instructions": "Season salmon and asparagus. Grill for 10-12 minutes. Serve with lemon slices."
+  },
+  {
+    "id": "7",
+    "title": "Quinoa Buddha Bowl",
+    "calories": 380,
+    "image": "/images/IMG_3970.jpg",
+    "ingredients": "Quinoa, chickpeas, spinach, roasted sweet potato, tahini dressing.",
+    "instructions": "Place quinoa in a bowl, arrange veggies on top, and pour over the tahini sauce."
+  },
+  {
+    "id": "8",
+    "title": "Greek Yogurt Parfait",
+    "calories": 210,
+    "image": "/images/273916greek-yogurt-breakfast-parfaitKim4x3-9a7099bd11644bebb23a78222a616f44.jpg",
+    "ingredients": "Greek yogurt, granola, walnuts, pomegranate seeds, mint leaves.",
+    "instructions": "Layer yogurt and granola in a glass. Top with walnuts and pomegranate."
+  },
+  {
+    "id": "9",
+    "title": "Eggplant Shakshuka",
+    "calories": 290,
+    "image": "/images/Eggplant-shakshuka_THUMBNAIL.jpg",
+    "ingredients": "Eggs, tomato sauce, eggplant, bell peppers, feta cheese, parsley.",
+    "instructions": "Simmer veggies in tomato sauce, crack eggs on top, cover until eggs are set."
+  }
+]
 }

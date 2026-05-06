@@ -19,13 +19,22 @@ function Favorites() {
   }
 
   return (
-    <div>
-      <h1>Favorites ❤️</h1>
-
+    <div className="grid">
       {favorites.map(recipe => (
-        <div key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <p>Calories: {recipe.calories}</p>
+        <div className="card" key={recipe.id}>
+          <img
+            src={recipe.image || "/images/default.png"}
+            alt={recipe.title}
+          />
+
+          <h2>{recipe.title}</h2>
+          <p>{recipe.calories} calories</p>
+
+          <h4>Ingredients:</h4>
+          <p>{recipe.ingredients}</p>
+
+          <h4>How to prepare:</h4>
+          <p>{recipe.instructions}</p>
 
           <button onClick={() => removeFromFavorites(recipe.id)}>
             Remove ❌
